@@ -11,6 +11,10 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+#map {
+  width: 100%;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -11395,13 +11399,13 @@ rgba(9, 202, 199, 1)
   .product-item .product-item-img {
     position: relative;
     z-index: 0;
-    max-width: 60vw;
+    max-width: 30vw;
   }
   .product-item .product-item-description {
     position: relative;
     z-index: 1;
     margin-top: -3rem;
-    max-width: 50vw;
+    max-width: 30vw;
   }
 }
 
