@@ -12,11 +12,20 @@ Como se explicó en la revisión 1, el sitio web está destinado para una tienda
 
 - Primeramente, se estableció los enlaces de la barra de navegación que necesitará el sitio web, que son: Noticias, Contáctanos, Principal, Equipo De Desarrollo, Horarios, y Acerca De.
 
+
+
   - Dispositivo móvil.
+
+
+
 ![navmovil](https://user-images.githubusercontent.com/66036423/122610286-f9aab580-d044-11eb-9816-851311f4cd22.PNG)
 
 
+
   - Desktop
+
+
+
 ![navdesktop](https://user-images.githubusercontent.com/66036423/122610362-17781a80-d045-11eb-8aec-c3240623a069.PNG)
 
 
@@ -29,7 +38,11 @@ Como se explicó en la revisión 1, el sitio web está destinado para una tienda
 ![Maps](https://user-images.githubusercontent.com/66036423/122611458-fadce200-d046-11eb-8022-1d35d82822e7.PNG)
 
 
+
   - Desktop
+
+
+
 ![mapsmovil](https://user-images.githubusercontent.com/66036423/122612926-95d6bb80-d049-11eb-8882-86548609ad64.PNG)
 
 
