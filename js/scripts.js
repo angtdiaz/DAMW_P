@@ -4,11 +4,13 @@
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-business-casual/blob/master/LICENSE)
 */
 // Highlights current date on contact page
+/*
 window.addEventListener('DOMContentLoaded', event => {
   const listHoursArray = document.body.querySelectorAll('.list-hours li');
   listHoursArray[new Date().getDay()].classList.add(('today'));
 })
 introJs().start();
+*/
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 //esta funcion valida que los campos del formulario estèn llenos
 (function () {
