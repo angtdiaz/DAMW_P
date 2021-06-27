@@ -11456,3 +11456,39 @@ rgba(9, 202, 199, 1)
 .col-12 .btn{
   color: white;
 }
+
+#bloque-1.inicial,
+#bloque-2.inicial,
+#bloque-3.inicial,
+#bloque-4.inicial,
+#bloque-5.inicial,
+#bloque-6.inicial,
+#submit.inicial {
+  display: none;
+}
+
+#bloque-1.final,
+#bloque-2.final,
+#bloque-3.final,
+#bloque-4.final,
+#bloque-5.final,
+#bloque-6.final,
+#submit.final {
+  animation: bajar-bloque 0.6s steps(90) both;
+}
+
+@keyframes bajar-bloque {
+  from { transform:translate(0, 0px);}
+  to { transform:translate(0, 5px);}
+}
+
+#boton.inicial {
+  transform:translate(0, 10px);
+}
+
+#final{
+  position: relative;
+  left: 45%;
+  height: 0;
+  width: 0;
+}

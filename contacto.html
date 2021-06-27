@@ -94,75 +94,98 @@
                 </div>
               -->
 
-              <div class="border border-dark">
+              <div id="formulario-steps" class="border border-dark">
                 <div class="progress">
                   <div class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="0"
                     aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-                <form class="row g-3 needs-validation" novalidate>
-                  <div  class="col">
-                    <label for="validationName" class="form-label">Nombres</label>
-                    <input type="text" class="form-control" id="validationName" onchange="prueba1('validationName')" required>
-                    <div class="invalid-feedback">
-                      Registre su nombre!
+                <form id="contactForm" name="sentMessage" class="row g-3 needs-validation" novalidate>
+                  <div id="bloque-1" class="row align-items-stretch mb-4 inicial">
+                    <div class="col">
+                      <label for="validationName" class="form-label">Nombres</label>
+                      <input type="text" class="form-control" id="validationName" onchange="prueba1('validationName')"
+                        required>
+                      <div class="invalid-feedback">
+                        Registre su nombre!
+                      </div>
+                    </div>
+                    <div class="col">
+                      <label for="validationLastName" class="form-label">Apellidos</label>
+                      <input type="text" class="form-control" id="validationLastName"
+                        onchange="prueba1('validationLastName')" required>
+                      <div class="invalid-feedback">
+                        Registre su apellido!
+                      </div>
                     </div>
                   </div>
-                  <div class="col">
-                    <label for="validationLastName" class="form-label">Apellidos</label>
-                    <input type="text" class="form-control" id="validationLastName" onchange="prueba1('validationLastName')" required>
-                    <div class="invalid-feedback">
-                      Registre su apellido!
+                  <div id="bloque-2" class="row align-items-stretch mb-2 inicial">
+                    <div class="mb-3">
+                      <label for="validationDate" class="form-label">Fecha de Nacimiento</label>
+                      <input type="text" class="form-control" id="validationDate" placeholder="DD/MM/AAAA"
+                        onchange="prueba1('validationDate')" required>
+                      <div class="invalid-feedback">
+                        Ingrese su fecha de nacimiento!
+                      </div>
                     </div>
                   </div>
-                  <div class="mb-3">
-                    <label for="validationDate" class="form-label">Fecha de Nacimiento</label>
-                    <input type="text" class="form-control" id="validationDate" placeholder="DD/MM/AAAA" onchange="prueba1('validationDate')" required>
-                    <div class="invalid-feedback">
-                      Ingrese su fecha de nacimiento!
+                  <div id="bloque-3" class="row align-items-stretch mb-4 inicial">
+                    <div class="mb-3">
+                      <label for="validationPhone" class="form-label">Número de Celular</label>
+                      <input type="text" class="form-control" id="validationPhone" onchange="prueba1('validationPhone')"
+                        required>
+                      <div class="invalid-feedback">
+                        Ingrese su número de celular!
+                      </div>
                     </div>
                   </div>
-                  <div class="mb-3">
-                    <label for="validationPhone" class="form-label">Número de Celular</label>
-                    <input type="text" class="form-control" id="validationPhone" onchange="prueba1('validationPhone')" required>
-                    <div class="invalid-feedback">
-                      Ingrese su número de celular!
+                  <div id="bloque-4" class="row align-items-stretch mb-4 inicial">
+                    <div class="col">
+                      <label for="validationProvince" class="form-label">Provincia</label>
+                      <select class="form-select" id="validationProvince" onchange="prueba1('validationProvince')"
+                        required>
+                        <option selected value="">Elija...</option>
+                        <option>...</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Escoga su provincia!
+                      </div>
                     </div>
                   </div>
-                  <div class="col">
-                    <label for="validationProvince" class="form-label">Provincia</label>
-                    <select class="form-select" id="validationProvince" onchange="prueba1('validationProvince')" required>
-                      <option selected value="">Elija...</option>
-                      <option>...</option>
-                    </select>
-                    <div class="invalid-feedback">
-                      Escoga su provincia!
+                  <div id="bloque-5" class="row align-items-stretch mb-4 inicial">
+                    <div class="col">
+                      <label for="validationCity" class="form-label">Ciudad</label>
+                      <select class="form-select" id="validationCity" onchange="prueba1('validationCity')" required>
+                        <option selected value="">Elija...</option>
+                        <option>...</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Escoga su ciudad!
+                      </div>
                     </div>
                   </div>
-                  <div class="col">
-                    <label for="validationCity" class="form-label">Ciudad</label>
-                    <select class="form-select" id="validationCity" onchange="prueba1('validationCity')" required>
-                      <option selected value="">Elija...</option>
-                      <option>...</option>
-                    </select>
-                    <div class="invalid-feedback">
-                      Escoga su ciudad!
+                  <div id="bloque-6" class="row align-items-stretch mb-4 inicial">
+                    <div class="mb-3">
+                      <label for="validationEmail" class="form-label">Correo Electronico</label>
+                      <input type="text" class="form-control" id="validationEmail" onchange="prueba1('validationEmail')"
+                        required>
+                      <div class="invalid-feedback">
+                        Ingrese su correo electronico!
+                      </div>
                     </div>
-                  </div>
-                  <div class="mb-3">
-                    <label for="validationEmail" class="form-label">Correo Electronico</label>
-                    <input type="text" class="form-control" id="validationEmail" onchange="prueba1('validationEmail')"  required>
-                    <div class="invalid-feedback">
-                     Ingrese su correo electronico!
+                    <div class="mb-3">
+                      <label>Detalles</label>
+                      <textarea class="form-control" id="validationTextarea"
+                        placeholder="Required example textarea"></textarea>
                     </div>
-                  </div>
-                  <div class="mb-3">
-                    <label>Detalles</label>
-                    <textarea class="form-control" id="validationTextarea" placeholder="Required example textarea"></textarea>
                   </div>
                   <div class="col-12">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                    <button class="btn btn-primary btn-xl text-uppercase inicial" id="submit" type="submit" (click)="enviarMensaje()">
+                      Submit
+                    </button>
                   </div>
-                </form>  
+                </form>
+                <button class="btn btn-primary btn-xl text-uppercase inicial" id="boton" value="bloque-1"
+                  type="reset">Escribir</button>
               </div>
             </div>
           </div>
