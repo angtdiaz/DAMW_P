@@ -11404,7 +11404,7 @@ rgba(9, 202, 199, 1)
   .product-item .product-item-description {
     position: relative;
     z-index: 1;
-    margin-top: -3rem;
+    margin-top: -1rem;
     max-width: 30vw;
   }
 }
