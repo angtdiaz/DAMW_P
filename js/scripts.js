@@ -9,6 +9,7 @@ window.addEventListener('DOMContentLoaded', event => {
     const listHoursArray = document.body.querySelectorAll('.list-hours li');
     listHoursArray[new Date().getDay()].classList.add(('today'));
 })
+<<<<<<< HEAD
 */
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
@@ -100,3 +101,6 @@ function printForm2() {
   document.getElementsByClassName("border border-dark")[0].innerHTML = plantillaForm2
   */
 }
+=======
+introJs().start();
+>>>>>>> 0e846b5b8f0e189a819577eb1cf2b259c581d20f
