@@ -6113,6 +6113,8 @@ rgba(9, 202, 199, 1)
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transition: transform 0.6s ease-in-out;
+  justify-content: center;
+  text-align: center;
 }
 @media (prefers-reduced-motion: reduce) {
   .carousel-item {
@@ -6177,7 +6179,7 @@ rgba(9, 202, 199, 1)
   text-align: center;
   background: none;
   border: 0;
-  opacity: 0.5;
+  opacity: 1;
   transition: opacity 0.15s ease;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -6209,6 +6211,7 @@ rgba(9, 202, 199, 1)
   display: inline-block;
   width: 2rem;
   height: 2rem;
+  font-weight: bold;
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: 100% 100%;
@@ -6273,13 +6276,14 @@ rgba(9, 202, 199, 1)
 
 .carousel-caption {
   position: absolute;
-  right: 15%;
-  bottom: 1.25rem;
-  left: 15%;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  color: #fff;
+  right: 30%;
+  bottom: 1rem; /*1.25*/
+  left: 30%;
+  padding-top: 0.5rem; /*1.25 - 1.25*/
+  padding-bottom: 0.5rem;
+  color: #000000;
   text-align: center;
+  background-color: rgba(192, 192, 192,0.8);
 }
 
 .carousel-dark .carousel-control-prev-icon,
@@ -11404,7 +11408,7 @@ rgba(9, 202, 199, 1)
   .product-item .product-item-description {
     position: relative;
     z-index: 1;
-    margin-top: -3rem;
+    margin-top: -1rem;
     max-width: 30vw;
   }
 }
@@ -11431,4 +11435,64 @@ rgba(9, 202, 199, 1)
 
 .address strong {
   font-size: 1.2rem;
+}
+
+.border{
+  padding: 25px;
+  background-color: white;
+}
+
+.col{
+  margin-top: 2rem!important;
+  margin-bottom: 1rem!important;
+}
+.progress{
+  margin-bottom: 1.5rem!important;
+}
+#formPart2{
+  z-index: 0;
+  position: fixed;
+}
+#formPart1{
+  z-index: 100;
+
+}
+.col-12 .btn{
+  color: white;
+}
+
+#bloque-1.inicial,
+#bloque-2.inicial,
+#bloque-3.inicial,
+#bloque-4.inicial,
+#bloque-5.inicial,
+#bloque-6.inicial,
+#submit.inicial {
+  display: none;
+}
+
+#bloque-1.final,
+#bloque-2.final,
+#bloque-3.final,
+#bloque-4.final,
+#bloque-5.final,
+#bloque-6.final,
+#submit.final {
+  animation: bajar-bloque 0.6s steps(90) both;
+}
+
+@keyframes bajar-bloque {
+  from { transform:translate(0, 0px);}
+  to { transform:translate(0, 5px);}
+}
+
+#boton.inicial {
+  transform:translate(0, 10px);
+}
+
+#final{
+  position: relative;
+  left: 45%;
+  height: 0;
+  width: 0;
 }
