@@ -291,16 +291,15 @@
                         Submit
                       </button>
                     </div>
-                  </form>
-                  <button
-                    class="btn btn-primary btn-xl text-uppercase inicial"
-                    id="boton"
-                    value="bloque-1"
-                    type="reset"
-                  >
-                    Escribir
-                  </button>
-                </div>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary btn-xl text-uppercase inicial" id="submit" type="submit" (click)="enviarMensaje()">
+                      Submit
+                    </button>
+                  </div>
+                </form>
+                <button class="btn btn-primary btn-xl text-uppercase inicial" id="boton" value="bloque-1"
+                  type="reset" onclick="stepper()">Escribir</button>
               </div>
             </div>
           </div>
