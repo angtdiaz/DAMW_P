@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', event => {
 })
 
 
-introJs().start();
+
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 //esta funcion valida que los campos del formulario estèn llenos

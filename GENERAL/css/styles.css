@@ -2161,6 +2161,7 @@ progress {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
+
 }
 @media (max-width: 1199.98px) {
   .table-responsive-xl {
@@ -5779,6 +5780,12 @@ rgba(9, 202, 199, 1)
   }
   .modal-fullscreen-lg-down .modal-footer {
     border-radius: 0;
+  }
+  .introjs-tooltip{
+    display:none;
+  }
+  .introjs-helperLayer{
+    display:none;
   }
 }
 @media (max-width: 1199.98px) {
