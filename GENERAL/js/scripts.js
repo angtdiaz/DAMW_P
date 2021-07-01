@@ -4,12 +4,6 @@ window.addEventListener('DOMContentLoaded', event => {
   listHoursArray[new Date().getDay()].classList.add(('today'));
 })
 
-fetch('DAWM_P/quipo.json')
-  .then(response => response.json())
-  .then(data => {
-      
-
-    });
 
 introJs().start();
 

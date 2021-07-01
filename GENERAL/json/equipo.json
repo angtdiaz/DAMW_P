@@ -1,25 +1,25 @@
 [
     {
       "nombre": "Angie Tuarez",
-      "edad": 22,
+      "edad": "22 años",
       "carrera": "Ingeniería en computación",
       "src": "https://avatars.githubusercontent.com/u/60304947?v=4"
     },
     {
         "nombre": "Manuel Loor",
-        "edad": 15,
+        "edad":  "22 años",
         "carrera": "Ingeniería en computación",
         "src": "https://avatars.githubusercontent.com/u/66036423?s=400&u=3670bdd4e47fbcd0edf37e3d03080759db28d841&v=4"
     },
     {
         "nombre": "Paul del Pozo",
-        "edad": 22,
+        "edad":  "22 años",
         "carrera": "Ingeniería en computación",
         "src": "https://avatars.githubusercontent.com/u/60304947?v=4"
     },
     {
         "nombre": "Tommy Villagomez",
-        "edad": 21,
+        "edad":  "21 años",
         "carrera": "Ingeniería en computación",
         "src": "https://avatars.githubusercontent.com/u/57923763?s=400&u=7831f4378e0e20aa39bcf1a734738a5ce1cb63a0&v=4"
     }
