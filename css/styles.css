@@ -6283,7 +6283,7 @@ rgba(9, 202, 199, 1)
   padding-bottom: 0.5rem;
   color: #000000;
   text-align: center;
-  background-color: rgba(192, 192, 192,0.8);
+  background-color: rgba(192, 192, 192, 0.8);
 }
 
 .carousel-dark .carousel-control-prev-icon,
@@ -11437,27 +11437,26 @@ rgba(9, 202, 199, 1)
   font-size: 1.2rem;
 }
 
-.border{
+.border {
   padding: 25px;
   background-color: white;
 }
 
-.col{
-  margin-top: 2rem!important;
-  margin-bottom: 1rem!important;
+.col {
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
 }
-.progress{
-  margin-bottom: 1.5rem!important;
+.progress {
+  margin-bottom: 1.5rem !important;
 }
-#formPart2{
+#formPart2 {
   z-index: 0;
   position: fixed;
 }
-#formPart1{
+#formPart1 {
   z-index: 100;
-
 }
-.col-12 .btn{
+.col-12 .btn {
   color: white;
 }
 
@@ -11482,15 +11481,19 @@ rgba(9, 202, 199, 1)
 }
 
 @keyframes bajar-bloque {
-  from { transform:translate(0, 0px);}
-  to { transform:translate(0, 5px);}
+  from {
+    transform: translate(0, 0px);
+  }
+  to {
+    transform: translate(0, 5px);
+  }
 }
 
 #boton.inicial {
-  transform:translate(0, 10px);
+  transform: translate(0, 10px);
 }
 
-#final{
+#final {
   position: relative;
   left: 45%;
   height: 0;
