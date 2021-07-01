@@ -15,7 +15,7 @@ introJs().start();
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 //esta funcion valida que los campos del formulario estèn llenos
-(function () {
+function validacion(){
   'use strict'
 
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
@@ -38,7 +38,7 @@ introJs().start();
       }, false)
     })
 }
-)()
+validacion();
 //Esta función permite que la barra de progreso crezca dependiendo de los campos que se van llenando
 //Y también va decreciendo cuando una  campo queda vacio
 var porcentProgress = 14.29;
@@ -60,10 +60,9 @@ function prueba1(id) {
 
   }
 }
-
-boton.addEventListener("click", function () {
+function stepper(){
+  let boton = document.getElementById('boton')
   let clase = "row align-items-stretch mb-4 final";
-
   if (boton.textContent == "Escribir") {
       boton.value = "bloque-2";
       boton.textContent = "Siguiente";
@@ -96,4 +95,4 @@ boton.addEventListener("click", function () {
           bloque2.className = clase;
       }
   }
-});
+}
