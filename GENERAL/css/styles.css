@@ -647,6 +647,11 @@ progress {
   margin-left: auto;
 }
 
+.container > .section-heading > .section-heading-lower
+{
+  text-align: center;
+}
+
 @media (min-width: 576px) {
   .container-sm,
   .container {
