@@ -303,6 +303,42 @@ kbd kbd {
   font-weight: 700;
 }
 
+.field {
+  display:flex;
+  position:realtive;
+  margin:5em auto;
+  width:70%;
+  flex-direction:row;
+  box-shadow:
+   1px 1px 0 rgba(2, 104, 111, 1),
+   2px 2px 0 rgba(2, 104, 111, 1),
+   3px 3px 0 rgba(2, 104, 111, 1),
+   4px 4px 0 rgba(2, 104, 111, 1),
+   5px 5px 0 rgba(2, 104, 111, 1),
+   6px 6px 0 rgba(2, 104, 111, 1),
+   7px 7px 0 rgba(2, 104, 111, 1)
+  ;
+}
+
+.field>input[type=text],
+.field>button {
+  display:block;
+  font:1.2em 'Montserrat Alternates';
+}
+
+.field>input[type=text] {
+  flex:1;
+  padding:0.6em;
+  border:0.2em solid rgba(2, 104, 111, 0.9);
+}
+
+.field>button {
+  padding:0.6em 0.8em;
+  background-color:rgba(2, 104, 111, 1);;
+  color:white;
+  border:none;
+}
+
 figure {
   margin: 0 0 1rem;
 }
