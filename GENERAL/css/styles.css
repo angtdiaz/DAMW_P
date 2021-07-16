@@ -687,10 +687,15 @@ progress {
 
 section#equipoEquipo
 {
-  display: flex;
+  display: flex !important;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
+}
+
+section#equipoEquipo img
+{
+  width: 100% !important;
 }
 
 .container > .section-heading > .section-heading-lower
