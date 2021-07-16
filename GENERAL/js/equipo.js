@@ -1,4 +1,4 @@
-fetch("../json/equipo.json")
+fetch("/GENERAL/json/equipoTrabajo.json")
 .then(response => response.json())
 .then(data => {
     let nombre;
