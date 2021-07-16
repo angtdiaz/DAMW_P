@@ -19,16 +19,49 @@ export class ProductosPanelComponent implements OnInit {
   getProductos() {
     this.productos = [
       {
-        codigo: 'AAA',
-        nombre: 'prueba'
+        codigo: 'A0',
+        nombre: 'Pulsera de Oro Goldfield (estrella)',
+        disponibilidad: '55 unidades'
       },
       {
-        codigo: 'BBB',
-        nombre: 'prueba2'
+        codigo: 'A1',
+        nombre: 'Pulsera de Plata (luna)',
+        disponibilidad: '40 unidades'
       },
       {
-        codigo: 'CCC',
-        nombre: 'prueba3'
+        codigo: 'A2',
+        nombre: 'Pulsera de Oro (inicial)',
+        disponibilidad: '20 unidades'
+      },
+      {
+        codigo: 'B0',
+        nombre: 'Cadena de Oro Goldfield (estrella)',
+        disponibilidad: '100 unidades'
+      },
+      {
+        codigo: 'B1',
+        nombre: 'Cadena de Plata (luna)',
+        disponibilidad: '56 unidades'
+      },
+      {
+        codigo: 'B2',
+        nombre: 'Cadena de Oro (inicial)',
+        disponibilidad: '88 unidades'
+      },
+      {
+        codigo: 'C0',
+        nombre: 'Aretes de Oro Goldfield (estrella)',
+        disponibilidad: '89 unidades'
+      },
+      {
+        codigo: 'C1',
+        nombre: 'Aretes de Plata (luna)',
+        disponibilidad: '200 unidades'
+      },
+      {
+        codigo: 'C2',
+        nombre: 'Aretes de Oro (inicial)',
+        disponibilidad: '150 unidades'
       },
     ]
   }
