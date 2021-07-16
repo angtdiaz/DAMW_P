@@ -685,6 +685,14 @@ progress {
   margin-left: auto;
 }
 
+section#equipoEquipo
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
 .container > .section-heading > .section-heading-lower
 {
   text-align: center;
