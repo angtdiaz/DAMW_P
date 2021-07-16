@@ -1,0 +1,24 @@
+<div class="card">
+    <div class="card-body">
+        <button class="btn btn-success" (click)="notificar()">Acción</button>
+        <input [(ngModel)]="producto.nombre" type="text" class="form-control" name="nombre">
+        <input [(ngModel)]="producto.precio" type="number" name="precio" class="form-control">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <th>#</th>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let producto of productos; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{producto.codigo}}</td>
+                        <td>{{producto.nombre}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
