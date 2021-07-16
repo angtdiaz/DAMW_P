@@ -1,18 +1,7 @@
 <div class="card">
   <div class="card-body">
-    <button class="btn btn-success" (click)="notificar()">Acción</button>
-    <input
-      [(ngModel)]="producto.nombre"
-      type="text"
-      class="form-control"
-      name="nombre"
-    />
-    <input
-      [(ngModel)]="producto.precio"
-      type="number"
-      name="precio"
-      class="form-control"
-    />
+    <button class="btn btn-info" (click)="notificar()">Agregar Producto</button>
+
     <div class="table-responsive">
       <table class="table table-striped">
         <thead>
@@ -20,6 +9,7 @@
           <th>Codigo</th>
           <th>Nombre</th>
           <th>Disponibilidad</th>
+          <th>opciones</th>
         </thead>
         <tbody>
           <tr *ngFor="let producto of productos; let i = index">
@@ -27,6 +17,17 @@
             <td>{{ producto.codigo }}</td>
             <td>{{ producto.nombre }}</td>
             <td>{{ producto.disponibilidad }}</td>
+            <td>
+              <div ngbDropdown class="d-inline-block" container="body">
+                <button class="btn" id="dropdownBasic1" ngbDropdownToggle>
+                  <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                  <button class="dropdown-item"> Editar</button>
+                  <button class="dropdown-item">Borrar</button>
+                </div>
+              </div>
+            </td>
           </tr>
         </tbody>
       </table>
