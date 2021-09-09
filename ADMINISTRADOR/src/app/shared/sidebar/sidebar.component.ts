@@ -3,6 +3,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ROUTES } from './menu-items';
 import { RouteInfo } from './sidebar.metadata';
 import { Router, ActivatedRoute } from '@angular/router';
+import { RequestService } from '../../services/request.service';
 declare var $: any;
 @Component({
   selector: 'app-sidebar',
@@ -31,10 +32,13 @@ export class SidebarComponent implements OnInit {
   constructor(
     private modalService: NgbModal,
     private router: Router,
-    private route: ActivatedRoute
-  ) {}
+    private route: ActivatedRoute,
+    public requestServ: RequestService
+  ) { }
   // End open close
   ngOnInit() {
+
+    console.log(this.requestServ.master)
     this.sidebarnavItems = ROUTES.filter(sidebarnavItem => sidebarnavItem);
   }
 }

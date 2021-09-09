@@ -4,13 +4,34 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { FullComponent } from './layouts/full/full.component';
 import { BlankComponent } from './layouts/blank/blank.component';
+import { AuthGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
   {
     path: '',
-    component: FullComponent,
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
+    path: '',
+    component: BlankComponent,
     children: [
-      { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+      {
+        path: '',
+        loadChildren: () => import('./authentication/authentication.module').then(m => m.AuthenticationModule)
+      }
+
+    ]
+  },
+  {
+    path: '',
+    component: FullComponent,
+    canActivate: [AuthGuard],
+    children: [
+      {
+        path: 'productos',
+        loadChildren: () => import('./productos/productos.module').then(m => m.ProductosModule)
+      },
       {
         path: 'dashboard',
         loadChildren: () => import('./dashboards/dashboard.module').then(m => m.DashboardModule)
@@ -19,16 +40,13 @@ export const routes: Routes = [
       {
         path: 'component',
         loadChildren: () => import('./component/component.module').then(m => m.ComponentsModule)
-      },
-      {
-        path: 'productos',
-        loadChildren: () => import('./productos/productos.module').then(m => m.ProductosModule)
       }
+
     ]
   },
   {
     path: '**',
-    redirectTo: 'productos'
+    redirectTo: 'login'
   }
 ];
 

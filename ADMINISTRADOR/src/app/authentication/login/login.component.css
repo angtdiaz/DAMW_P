@@ -1,0 +1,9 @@
+.login-register {
+  width: 100%;
+  height: 100vh;
+  background: url("../../../assets/images/background/login-register.jpg")
+    no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+

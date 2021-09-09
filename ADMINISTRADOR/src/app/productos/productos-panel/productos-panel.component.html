@@ -1,6 +1,6 @@
 <div class="card">
   <div class="card-body">
-    <button class="btn btn-info" (click)="notificar()">Agregar Producto</button>
+    <button class="btn btn-info">Agregar Producto</button>
 
     <div class="table-responsive">
       <table class="table table-striped">
@@ -8,15 +8,20 @@
           <th>#</th>
           <th>Codigo</th>
           <th>Nombre</th>
-          <th>Disponibilidad</th>
+          <th>descripcion</th>
+          <th>cantidad</th>
+          <th>status</th>
           <th>opciones</th>
         </thead>
         <tbody>
           <tr *ngFor="let producto of productos; let i = index">
             <td>{{ i + 1 }}</td>
-            <td>{{ producto.codigo }}</td>
+            <td>{{ producto.id }}</td>
             <td>{{ producto.nombre }}</td>
-            <td>{{ producto.disponibilidad }}</td>
+            <td>{{ producto.descripcion }}</td>
+            <td>{{ producto.cantidad }}</td>
+            <td>{{ producto.status }}</td>
+
             <td>
               <div ngbDropdown class="d-inline-block" container="body">
                 <button class="btn" id="dropdownBasic1" ngbDropdownToggle>
@@ -34,3 +39,52 @@
     </div>
   </div>
 </div>
+
+<ng-template #content let-modal>
+  <div class="animate__animated animate__fadeIn">
+    <div class="modal-header ">
+      <h4 *ngIf="!producto.edit" class="modal-title" id="modal-basic-title">Crear producto</h4>
+      <h4 *ngIf="producto.edit" class="modal-title" id="modal-basic-title">Editar producto</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <form (ngSubmit)="gestion()" #form="ngForm">
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" [value]="producto.nombre" [(ngModel)]="producto.nombre" name="nombre" class="form-control"
+            type="text" required>
+        </div>
+        <div class="form-group">
+          <label for="usuario">Usuario</label>
+          <input id="usuario" [value]="producto.usuario" [(ngModel)]="producto.usuario" name="usuario"
+            class="form-control" type="text" required>
+        </div>
+        <div class="form-group">
+          <label for="pass">Contrasena </label>
+          <input *ngIf="!mostrarTexto" id="pass" [value]="producto.pass" [(ngModel)]="producto.pass" name="pass"
+            class="form-control" type="password" required>
+          <input *ngIf="mostrarTexto" id="pass" [value]="producto.pass" [(ngModel)]="producto.pass" name="pass"
+            class="form-control" type="text" required>
+        </div>
+        <div class="form-group">
+          <label class="mr-2" for="mostrarTexto">Mostrar Texto</label>
+          <input type="checkbox" name="mostraTexto" id="mostrarTexto" [checked]="mostrarTexto"
+            (change)="cambiarMostrarTexto($event.target.checked)">
+        </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-info" type="submit" [disabled]="!form.valid || requestServ.loading">
+          <span *ngIf="requestServ.loading"><span class="spinner-border spinner-border-sm mr-2" role="status"
+              aria-hidden="true"></span>
+            Loading...
+          </span>
+          <span *ngIf="!requestServ.loading">Guardar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</ng-template>
