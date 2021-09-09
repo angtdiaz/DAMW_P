@@ -34,7 +34,7 @@ export const ROUTES: RouteInfo[] = [
   },
   {
     path: '/',
-    title: 'Promociones',
+    title: 'Usuarios',
     icon: 'mdi mdi-bullseye',
     class: '',
     label: '',

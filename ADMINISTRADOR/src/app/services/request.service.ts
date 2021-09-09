@@ -21,7 +21,6 @@ export class RequestService {
     if (localStorage.joyeria) {
       this.master = JSON.parse(localStorage.joyeria);
       this.nombre = this.master.email;
-
     }
   }
   guardarStorage(data: any) {
@@ -94,5 +93,60 @@ export class RequestService {
           );
       });
     }
+  }
+  async createProducto(data: any) {
+    this.loading = true;
+    const headers = new HttpHeaders({
+      'Authorization': "Bearer " + this.master.token
+    });
+    return new Promise(resolve => {
+      this.http.post(`${environment.apiUrl}/producto`, data, { headers }).subscribe((response: any) => {
+        this.showAlert(response.data, 'success');
+        resolve(true);
+        this.loading = false;
+      }, (error: any) => {
+        this.loading = false;
+        if (this.tokenIsValid(error.status)) {
+          this.showAlert(error.error.data, 'error');
+        }
+        resolve(false);
+      });
+    });
+  }
+  async editProducto(id: any, body: any) {
+    this.loading = true;
+    const headers = new HttpHeaders({
+      'Authorization': "Bearer " + this.master.token
+    });
+    return new Promise(resolve => {
+      this.http.put(`${environment.apiUrl}/producto/${id}`, body, { headers }).subscribe((response: any) => {
+        this.showAlert("Producto editado con exito", 'success');
+        resolve(true);
+        this.loading = false;
+      }, (error: any) => {
+        this.loading = false;
+        if (!this.tokenIsValid(error.status)) {
+          this.showAlert("Error al cargar productos", "error");
+        }
+        resolve([false]);
+      });
+    });
+  }
+  async deleteProducto(id: string) {
+    this.loading = true;
+    const headers = new HttpHeaders({ 'access-token': this.master.apiKey });
+    return new Promise(resolve => {
+      this.http.delete(`${environment.apiUrl}/producto/${id}`,).subscribe((response: any) => {
+        this.loading = false;
+        this.showAlert(response.data, 'success');
+        resolve([true, response.data]);
+      }, (error: any) => {
+        this.loading = false;
+        if (!this.tokenIsValid(error.status)) {
+          this.showAlert(error.error.data, 'eror');
+        }
+        resolve([false])
+      });
+    })
   }
 }

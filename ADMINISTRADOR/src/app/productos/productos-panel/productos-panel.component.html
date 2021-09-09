@@ -1,26 +1,27 @@
 <div class="card">
   <div class="card-body">
-    <button class="btn btn-info">Agregar Producto</button>
+    <button class="btn btn-info" (click)="open(content)">Agregar Producto</button>
 
     <div class="table-responsive">
       <table class="table table-striped">
-        <thead>
-          <th>#</th>
+        <thead class="text-center">
           <th>Codigo</th>
           <th>Nombre</th>
           <th>descripcion</th>
           <th>cantidad</th>
+          <th>precio</th>
           <th>status</th>
           <th>opciones</th>
         </thead>
         <tbody>
-          <tr *ngFor="let producto of productos; let i = index">
-            <td>{{ i + 1 }}</td>
+          <tr class="text-center" *ngFor="let producto of productos; let i = index">
             <td>{{ producto.id }}</td>
             <td>{{ producto.nombre }}</td>
             <td>{{ producto.descripcion }}</td>
             <td>{{ producto.cantidad }}</td>
-            <td>{{ producto.status }}</td>
+            <td>{{ producto.precio }}</td>
+            <td *ngIf="producto.status"><span class="btn btn-success btn-sm">Activo</span></td>
+            <td *ngIf="!producto.status"><span class="btn btn-danger btn-sm">Inactivo</span></td>
 
             <td>
               <div ngbDropdown class="d-inline-block" container="body">
@@ -28,8 +29,8 @@
                   <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
                 </button>
                 <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                  <button class="dropdown-item"> Editar</button>
-                  <button class="dropdown-item">Borrar</button>
+                  <button class="dropdown-item" (click)="open(content,producto)"> Editar</button>
+                  <button class="dropdown-item" (click)="deleteTecnico(producto.id)">Borrar</button>
                 </div>
               </div>
             </td>
@@ -53,26 +54,28 @@
       <div class="modal-body">
         <div class="form-group">
           <label for="nombre">Nombre</label>
-          <input id="nombre" [value]="producto.nombre" [(ngModel)]="producto.nombre" name="nombre" class="form-control"
-            type="text" required>
+          <input [(ngModel)]="producto.nombre" name="nombre" class="form-control" type="text" required>
         </div>
         <div class="form-group">
-          <label for="usuario">Usuario</label>
-          <input id="usuario" [value]="producto.usuario" [(ngModel)]="producto.usuario" name="usuario"
-            class="form-control" type="text" required>
+          <label for="descripcion">Descripcion</label>
+          <input [(ngModel)]="producto.descripcion" name="descripcion" class="form-control" type="text" required>
         </div>
         <div class="form-group">
-          <label for="pass">Contrasena </label>
-          <input *ngIf="!mostrarTexto" id="pass" [value]="producto.pass" [(ngModel)]="producto.pass" name="pass"
-            class="form-control" type="password" required>
-          <input *ngIf="mostrarTexto" id="pass" [value]="producto.pass" [(ngModel)]="producto.pass" name="pass"
-            class="form-control" type="text" required>
+          <label for="cantidad">Cantidad</label>
+          <input [(ngModel)]="producto.cantidad" name="cantidad" class="form-control" type="text" required>
         </div>
         <div class="form-group">
-          <label class="mr-2" for="mostrarTexto">Mostrar Texto</label>
-          <input type="checkbox" name="mostraTexto" id="mostrarTexto" [checked]="mostrarTexto"
-            (change)="cambiarMostrarTexto($event.target.checked)">
+          <label for="precio">Precio</label>
+          <input [(ngModel)]="producto.precio" name="precio" class="form-control" type="text" required>
         </div>
+        <div class="form-group">
+          <div class="custom-control custom-checkbox custom-control-inline">
+            <input [(ngModel)]="producto.status" name="status" type="checkbox" class="custom-control-input"
+              [checked]="producto.status">
+            <label class="custom-control-label" for="status">Esta activo?</label>
+          </div>
+        </div>
+
 
 
       </div>

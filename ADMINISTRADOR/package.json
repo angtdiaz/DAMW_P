@@ -59,6 +59,7 @@
         "randomatic": "^3.1.1",
         "rxjs": "^6.5.4",
         "rxjs-compat": "^6.5.4",
+        "sweetalert2": "^11.1.5",
         "zone.js": "~0.10.2"
     },
     "devDependencies": {
