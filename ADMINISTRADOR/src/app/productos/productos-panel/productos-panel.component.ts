@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RequestService } from '../../services/request.service';
 
+declare var jsPDF: any;
 @Component({
   selector: 'app-productos-panel',
   templateUrl: './productos-panel.component.html',
@@ -67,6 +68,19 @@ export class ProductosPanelComponent implements OnInit {
   }
   notificar() {
     this.requestServ.showAlert(`${this.producto.nombre} con precio de ${this.producto.precio}`, 'warning');
+  }
+  downloadPDF() {
+
+    let columns = ["ID", "Name", "Country"];
+    let rows = [
+      [1, "Shaw", "Tanzania"],
+      [2, "Nelson", "Kazakhstan"],
+      [3, "Garcia", "Madagascar"],
+    ];
+    console.log("hola")
+    let doc = new jsPDF('l', 'pt');
+    doc.autoTable(columns, rows); // typescript compile time error
+    doc.save('table.pdf');
   }
 
 
